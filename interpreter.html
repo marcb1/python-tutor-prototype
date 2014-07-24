@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+
+		<title>Interactive Interpreter</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/terminal.css" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/terminal-jquery-0.8.8.js"></script>
+
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+    <script>
+    <!-- to make the terminal emulator work -->
+      jQuery(function($, undefined) {
+    $('#term_demo').terminal(function(command, term) {
+    if (command !== '') {
+    try {
+    var result = window.eval(command);
+    if (result !== undefined) {
+    term.echo(new String(result));
+    }
+    } catch(e) {
+    term.error(new String(e));
+    }
+    } else {
+    term.echo('');
+    }
+    }, {
+    greetings: 'Welcome to our python interactive tutor',
+    name: 'js_demo',
+    height: 500,
+    prompt: 'python> '});
+    });
+
+          $(document).ready(function()
+    {
+      $("#header").load("header.html");
+      $("#sidebar").load("sidebar.html");
+    });
+        </script>
+	</head>
+
+	<body>
+
+<div id="header"></div>
+
+<!-- Begin Body -->
+<div class="container">
+  <div class="page-header">
+          <h1>Learn Python</h1>
+          <p class="lead">Interactive Interpreter</p>
+        </div>
+	<div class="row">
+  <div id="sidebar"></div>
+
+      		<div class="col-md-9">
+            <div class="well">
+              	<h2 id="sec0">Interactive Tutor</h2>
+                Start typing your python code
+                <br>
+                
+
+                          <div class="terminal" style="height: 200px;" id="term_demo"><div class="terminal-output"><div><div style="width: 100%;"></div></div></div></div>
+
+
+                </div>
+
+      		</div> 
+  	</div>
+</div>
+
+	</body>
+</html>
