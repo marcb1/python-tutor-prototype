@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+
+		<title>Learn Python</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/terminal.css" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/terminal-jquery-0.8.8.js"></script>
+
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+    <script>
+    <!-- to make the terminal emulator work -->
+      jQuery(function($, undefined) {
+    $('#term_demo').terminal(function(command, term) {
+    if (command !== '') {
+    try {
+    var result = window.eval(command);
+    if (result !== undefined) {
+    term.echo(new String(result));
+    }
+    } catch(e) {
+    term.error(new String(e));
+    }
+    } else {
+    term.echo('');
+    }
+    }, {
+    greetings: 'Welcome to our python interactive tutor',
+    name: 'js_demo',
+    height: 500,
+    prompt: 'python> '});
+    });
+
+          $(document).ready(function()
+    {
+      $("#header").load("include/header.html");
+      $("#sidebar").load("include/sidebar.html");
+    });
+    </script>
+	</head>
+
+	<body>
+
+<div id="header"></div>
+
+<!-- Begin Body -->
+<div class="container">
+  <div class="page-header">
+          <h1>Learn Python</h1>
+          <p class="lead">Hello World!</p>
+        </div>
+	<div class="row">
+    <div id="sidebar"></div>
+
+      		<div class="col-md-9">
+              	<h2 id="sec0">Lesson 1- Hello World!</h2>
+                by Marc and John Paul
+
+           
+              	<hr class="col-md-12">
+                
+              
+              	<h2 id="sec1">The print function</h2>
+              	<p>
+                  Python comes with some built in functions. the print function, prints the string given to it and a new line unlike the C printf function.
+                  <br>
+                  We call the python print function like so: print "hi". This tutorial uses python2, in python3 they tried to make the syntax similar to a regular function call.
+                  
+                  In python3 we call print like so: print("hi)
+                </p>
+              	<div class="row">
+                  <div class="col-md-6">
+                    <div class="panel panel-default">
+                      <div class="panel-heading"><h3>python3</h3></div>
+                      <div class="panel-body">print("hello world!")
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="panel panel-default">
+                      <div class="panel-heading"><h3>python2</h3></div>
+                      <div class="panel-body">print "hello world!"
+                      </div>
+                    </div>
+                  </div>  
+              	</div> 
+              
+              	<hr>
+              
+              	<h2 id="sec2">Indentation</h2>
+              	<p>
+                <div class="well"> 
+                  function print_hello_world:
+                    <br> &nbsp print "hello world!"
+                    <br> &nbsp print "spaces must be consistent!"
+                </div>
+                Instead of curly braces python uses indentation, the standard says 4 spaces. But as long as you are consistent the interpreter doesn't care.
+                The above is a function that prints hello world, notice how the indentation is consistent.
+              	</p>
+              
+              	<hr>
+              
+              	<h2 id="sec3">Interactive tutor</h2>
+      			
+              <div class="well">
+
+                <div class="alert alert-info alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <strong>Here's a suggestion</strong> <br> Try to be consistent with your spacing.
+            </div>
+              <div class="terminal" style="height: 200px;" id="term_demo"><div class="terminal-output"><div><div style="width: 100%;"></div></div></div></div>
+            </div>
+              	<hr>
+              End :)
+              	<hr>
+              	
+      		</div> 
+  	</div>
+</div>
+
+	</body>
+</html>
