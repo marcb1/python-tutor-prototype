@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+
+		<title>Learn Python</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+    <script>
+    $(document).ready(function()
+    {
+      $("#header").load("include/header.html");
+      $("#sidebar").load("include/sidebar.html");
+    });
+    </script>
+	</head>
+
+	<body>
+
+<div id="header"></div>
+
+<!-- Begin Body -->
+<div class="container">
+  <div class="page-header">
+          <h1>Learn Python</h1>
+          <p class="lead">Website Overview</p>
+        </div>
+	<div class="row">
+        <ul class="breadcrumb">  
+  <li>  
+    <a href="index.html">Home</a>   
+    </li>
+    <li> 
+    <a href="help.html">Help</a>  
+  </li>  
+</ul> 
+    <div id="sidebar"></div>
+
+      		<div class="col-md-9">
+                <h2 id="sec0">Website overview!</h2>
+                This describes the current features that have been implemented in our design. 
+                <br>
+                For future features that have not been implemented please check our powerpoint.         
+                <hr class="col-md-12">
+                
+              
+                <h3 id="sec1">The sidebar</h3>
+                <p>
+                  The sidebar displays all the current lessons that are available for you to use. If you want a very short overview of each lesson (before deciding which lesson you want to read), click the all lessons link in the sidebar. Currently the only lesson we have implemented, is the hello world lesson. Every lesson has an interactive tutor at the bottom of the page so you can start coding and receive feedback in real time.
+                </p>
+                <hr>
+              
+                <h3 id="sec2">The breadcrumbs</h3>
+                <p>
+                  The breadcrumbs are under the website title so you don't get lost while going through our website. If you want to get back to where you were or figure out how you got to a certain page, check the breadcrumbs.
+                </p>
+              
+                <hr>
+              
+                <h3 id="sec3">The navigation bar</h3>
+                <p>
+                  The navigation bar has a search bar so you can search for certain lessons that you are looking for. It also has a link to the interactive tutor if you just want to program without having to go to a lesson page. 
+                </p>
+
+                          <h3 id="sec3">The interactive tutor</h3>
+                <p>
+                 Jump right into coding, our interactive tutor will guide you along and suggest code improvements in real time while you type!
+                </p>
+            
+                <hr>
+           
+                
+          </div> 
+  	</div>
+</div>
+
+	</body>
+</html>
